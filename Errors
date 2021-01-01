@@ -1,0 +1,6 @@
+ERROR   EX3884 : 'mem_control' is already declared(/home/ubantu/Code/GCore/src/top.v:72)
+ERROR   EX3829 : port 'acc_out' is not defined(/home/ubantu/Code/GCore/src/top.v:30)
+ERROR   EX3989 : cannot index into non-array type wire for 'op'(/home/ubantu/Code/GCore/src/top.v:54)
+ERROR   EX3989 : cannot index into non-array type wire for 'op'(/home/ubantu/Code/GCore/src/top.v:67)
+ERROR   EX3989 : cannot index into non-array type wire for 'op'(/home/ubantu/Code/GCore/src/top.v:75)
+ERROR   EX3928 : module 'top' ignored due to previous errors(/home/ubantu/Code/GCore/src/top.v:110)
