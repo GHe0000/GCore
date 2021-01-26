@@ -1,0 +1,76 @@
+//
+//Written by GowinSynthesis
+//Product Version "GowinSynthesis V1.9.7.01Beta"
+//Tue Jan 26 20:24:38 2021
+
+//Source file index table:
+//file0 "\/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v"
+`timescale 100 ps/100 ps
+module top (
+  in,
+  out
+)
+;
+input [7:0] in;
+output [7:0] out;
+wire [7:4] out_d;
+wire VCC;
+wire GND;
+  IBUF in_0_ibuf (
+    .O(out_d[4]),
+    .I(in[0]) 
+);
+  IBUF in_1_ibuf (
+    .O(out_d[5]),
+    .I(in[1]) 
+);
+  IBUF in_2_ibuf (
+    .O(out_d[6]),
+    .I(in[2]) 
+);
+  IBUF in_3_ibuf (
+    .O(out_d[7]),
+    .I(in[3]) 
+);
+  OBUF out_0_obuf (
+    .O(out[0]),
+    .I(GND) 
+);
+  OBUF out_1_obuf (
+    .O(out[1]),
+    .I(GND) 
+);
+  OBUF out_2_obuf (
+    .O(out[2]),
+    .I(GND) 
+);
+  OBUF out_3_obuf (
+    .O(out[3]),
+    .I(GND) 
+);
+  OBUF out_4_obuf (
+    .O(out[4]),
+    .I(out_d[4]) 
+);
+  OBUF out_5_obuf (
+    .O(out[5]),
+    .I(out_d[5]) 
+);
+  OBUF out_6_obuf (
+    .O(out[6]),
+    .I(out_d[6]) 
+);
+  OBUF out_7_obuf (
+    .O(out[7]),
+    .I(out_d[7]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* top */

@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+  "InstLine" : 3,
+  "InstName" : "top",
+  "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "top"
+ }
+]
