@@ -4,7 +4,7 @@
 //GOWIN Version: V1.9.7.01Beta
 //Part Number: GW1N-LV1QN48C6/I5
 //Device: GW1N-1
-//Created Time: Sat Jan 23 17:21:53 2021
+//Created Time: Tue Jan 26 18:32:22 2021
 
 module oprom (dout, clk, oce, ce, reset, ad);
 

@@ -14,7 +14,7 @@
 // --------------------------
 
 
-module top(clk, rst, write, writeop,addr);
+module top(clk, rst, write, writeop, writeaddr, acc_out);
 
 // -------- I/O Set ---------
 // Control
@@ -24,20 +24,24 @@ input rst;
 // Set OP
 input write;
 input [7:0] writeop;
-input [7:0] addr; 
+input [7:0] writeaddr; 
 
 // Out
 output [7:0] acc_out;
 // --------------------------
+
+reg [7:0] op;
 assign acc_out = acc_data;
 
+always @ *
+    op <= op_reg;
 
 // ------- Module Set -------
 pc pc(
     .jump(jump|(branch&zero)),
     .clk(clk),//!
     .addr(op_addr),
-    .jumpaddr(mem_control),
+    .jumpaddr(mem_data),
     .rst(rst)
     );
 
@@ -45,9 +49,9 @@ opram_control opram_control(
     .write(write),
     .clk(clk),//!
     .rst(rst),
-    .addr(ap_addr),
+    .addr(op_addr),
     .writeop(writeop),
-    .op(op)
+    .op(op_reg)
     );
 
 control control(

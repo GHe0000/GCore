@@ -17,7 +17,7 @@ module opram_control(write, writeop, clk, op, addr, rst);
         .ce(1'b1), //input ce
         .reset(rst), //input reset
         .wre(write), //input wre
-        .ad(add), //input [2:0] ad
+        .ad(addr), //input [2:0] ad
         .din(writeop) //input [7:0] din
     );
 //--------Copy end-------------------
