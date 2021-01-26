@@ -1,4 +1,5 @@
 # GCore  
+
 ---
 
 #### A simple RISC CPU on Lichee Nano FPGA  
@@ -6,6 +7,12 @@
 ##### Version:0.3.6 Beta 
 
 ---
+
+![GCore Net](./Picture/net.png)
+
+---
+
+
 
 ## OP list  
 
@@ -28,5 +35,4 @@
 ---
 
 ## To Do  
-Clock  
-RTL Test   
+Clock     
