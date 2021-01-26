@@ -12,8 +12,6 @@
 
 ---
 
-
-
 ## OP list  
 
 | OP    | Bin   | Hex  |
