@@ -8,7 +8,7 @@
 
 ---
 
-![GCore Net](./Picture/net.png)
+![GCore Net](./Picture/net.jpg)
 
 ---
 
