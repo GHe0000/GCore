@@ -20,62 +20,63 @@
 `define SLLtoAcc 2'b11
 
 module control(op, jump, branch, aluop, accwrite, accdst, memread, memwrite);
-    input [7:0] op;
 
-    output jump, branch, accwrite, memread, memwrite;
-    output [2:0] aluop;
-    output [1:0] accdst;
+input [3:0] op;
 
-    reg [2:0] aluop;
-    reg [1:0] accdst;
-    reg jump, branch, accwrite, memread, memwrite;
+output jump, branch, accwrite, memread, memwrite;
+output [2:0] aluop;
+output [1:0] accdst;
 
-    always @(op)
-        begin
-            if(op[7]==1)
-                begin
-                    aluop<=op[6:4];
-                    if(op==`BZ)
+reg [2:0] aluop;
+reg [1:0] accdst;
+reg jump, branch, accwrite, memread, memwrite;
+
+always @(op)
+    begin
+        if(op[3]==1)
+            begin
+                aluop<=op[2:0];
+                if(op==`BZ)
+                    begin
+                        branch<=1;
+                        memread<=1;
+                    end
+                else
+                    begin
+                        memread<=1;
+                        accdst<=`ALUtoAcc;
+                        accwrite<=1;
+                    end
+            end
+        else 
+            begin
+                case(op)
+                    `JUMP:
                         begin
-                            branch<=1;
+                            jump<=1;
                             memread<=1;
                         end
-                    else
+                    `SAVE:
                         begin
+                            memwrite<=1;
+                        end
+                    `LOAD:
+                        begin
+                            accdst<=`MemtoAcc;
+                            accwrite<=1;
                             memread<=1;
-                            accdst<=`ALUtoAcc;
+                        end
+                    `LOADI:
+                        begin
+                            accdst<=`ImmtoAcc;
+                            accwrite<=1;
+                        end    
+                    `SLL:
+                        begin      
+                            accdst<=`SLLtoAcc;
                             accwrite<=1;
                         end
-                end
-            else 
-                begin
-                    case(op)
-                        `JUMP:
-                            begin
-                                jump<=1;
-                                memread<=1;
-                            end
-                        `SAVE:
-                            begin
-                                memwrite<=1;
-                            end
-                        `LOAD:
-                            begin
-                                accdst<=`MemtoAcc;
-                                accwrite<=1;
-                                memread<=1;
-                            end
-                        `LOADI:
-                            begin
-                                accdst<=`ImmtoAcc;
-                                accwrite<=1;
-                            end    
-                        `SLL:
-                            begin      
-                                accdst<=`SLLtoAcc;
-                                accwrite<=1;
-                            end
-                    endcase
-                end
-        end    
+                endcase
+            end
+    end    
 endmodule

@@ -1,7 +1,9 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v'
 Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v":3)
+Compiling module 'opram'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v":9)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
@@ -17,6 +19,8 @@ Running technical mapping ...
 [60%] Tech-Mapping Phase 0 completed
 [65%] Tech-Mapping Phase 1 completed
 [75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
 [95%] Generate netlist file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/gwsynthesis/GCore_test.vg" completed
 [100%] Generate report file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/gwsynthesis/GCore_test_syn.rpt.html" completed
 GowinSynthesis finish

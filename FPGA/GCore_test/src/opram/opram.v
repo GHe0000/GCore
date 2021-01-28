@@ -4,9 +4,9 @@
 //GOWIN Version: V1.9.7.01Beta
 //Part Number: GW1N-LV1QN48C6/I5
 //Device: GW1N-1
-//Created Time: Thu Jan 28 21:58:29 2021
+//Created Time: Thu Jan 28 21:53:53 2021
 
-module mem (dout, clk, oce, ce, reset, wre, ad, din);
+module opram (dout, clk, oce, ce, reset, wre, ad, din);
 
 output [7:0] dout;
 input clk;
@@ -14,7 +14,7 @@ input oce;
 input ce;
 input reset;
 input wre;
-input [3:0] ad;
+input [7:0] ad;
 input [7:0] din;
 
 wire [23:0] sp_inst_0_dout_w;
@@ -30,7 +30,7 @@ SP sp_inst_0 (
     .RESET(reset),
     .WRE(wre),
     .BLKSEL({gw_gnd,gw_gnd,gw_gnd}),
-    .AD({gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,ad[3:0],gw_gnd,gw_gnd,gw_gnd}),
+    .AD({gw_gnd,gw_gnd,gw_gnd,ad[7:0],gw_gnd,gw_gnd,gw_gnd}),
     .DI({gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,din[7:0]})
 );
 
@@ -40,4 +40,4 @@ defparam sp_inst_0.BIT_WIDTH = 8;
 defparam sp_inst_0.BLK_SEL = 3'b000;
 defparam sp_inst_0.RESET_MODE = "SYNC";
 
-endmodule //mem
+endmodule //opram

@@ -6,10 +6,10 @@
 
 -mod_name mem
 -file_name mem
--path /home/ubantu/Code/GCore/FPGA/GCore/src/mem/
+-path /home/ubantu/Code/GCore/FPGA/GCore_test/src/mem/
 -type RAM_SP
 -file_type vlg
--depth 16
+-depth 4
 -width 8
 -read_mode bypass
 -write_mode normal

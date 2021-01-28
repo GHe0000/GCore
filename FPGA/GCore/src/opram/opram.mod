@@ -6,10 +6,10 @@
 
 -mod_name opram
 -file_name opram
--path /home/ubantu/Code/GCore/src/opram/
+-path /home/ubantu/Code/GCore/FPGA/GCore/src/opram/
 -type RAM_SP
 -file_type vlg
--depth 8
+-depth 256
 -width 8
 -read_mode bypass
 -write_mode normal

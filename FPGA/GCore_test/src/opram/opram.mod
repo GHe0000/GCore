@@ -4,12 +4,12 @@
 -part_number GW1N-LV1QN48C6/I5
 
 
--mod_name mem
--file_name mem
--path /home/ubantu/Code/GCore/FPGA/GCore/src/mem/
+-mod_name opram
+-file_name opram
+-path /home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/
 -type RAM_SP
 -file_type vlg
--depth 16
+-depth 256
 -width 8
 -read_mode bypass
 -write_mode normal

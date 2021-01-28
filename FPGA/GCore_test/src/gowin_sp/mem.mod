@@ -6,7 +6,7 @@
 
 -mod_name mem
 -file_name mem
--path /home/ubantu/Code/GCore/FPGA/GCore/src/mem/
+-path /home/ubantu/Code/GCore/FPGA/GCore_test/src/gowin_sp/
 -type RAM_SP
 -file_type vlg
 -depth 16

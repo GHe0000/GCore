@@ -4,7 +4,7 @@
 //GOWIN Version: V1.9.7.01Beta
 //Part Number: GW1N-LV1QN48C6/I5
 //Device: GW1N-1
-//Created Time: Thu Jan 28 21:58:29 2021
+//Created Time: Thu Jan 28 21:23:13 2021
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
@@ -16,7 +16,7 @@
         .ce(ce_i), //input ce
         .reset(reset_i), //input reset
         .wre(wre_i), //input wre
-        .ad(ad_i), //input [3:0] ad
+        .ad(ad_i), //input [1:0] ad
         .din(din_i) //input [7:0] din
     );
 

@@ -3,6 +3,10 @@
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
    "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v",
+   "Type" : "verilog"
   }
  ],
  "IncludePath" : [

@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top"/>
+<Module name="top">
+ <SubModule name="pc" Register="8" Lut="17"/>
+ <SubModule name="accum" Register="8"/>
+ <SubModule name="alu" Register="8" Alu="16" Lut="22"/>
+ <SubModule name="control" Register="9" Lut="7"/>
+ <SubModule name="mux" Lut="16"/>
+ <SubModule name="opram_control" Lut="1">
+  <SubModule name="opram" Bsram="1"/>
+ </SubModule>
+ <SubModule name="mem_control">
+  <SubModule name="mem" Bsram="1"/>
+ </SubModule>
+</Module>

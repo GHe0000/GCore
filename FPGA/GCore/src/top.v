@@ -1,42 +1,23 @@
-// CPU Top
-
-// -------- Include ----------
-//`include "accum.v"
-//`include "alu.v"
-//`include "clock.v"
-//`include "control.v"
-//`include "imm_builder.v"
-//`include "mem_control.v"
-//`include "mux.v"
-//`include "opram_control.v"
-//`include "pc.v"
-//`include "sll_builder.v"
-// --------------------------
-
+// GCore CPU Top
 
 module top(clk, rst, write, writeop, writeaddr, acc_out);
 
-// -------- I/O Set ---------
-// Control
 input clk;
 input rst;
 
-// Set OP
 input write;
 input [7:0] writeop;
 input [7:0] writeaddr; 
 
-// Out
 output [7:0] acc_out;
-// --------------------------
 
-reg [7:0] op;
+wire jump, branch, zero, accwrite,memwrite, memread;
+wire [1:0] accdst;
+wire [2:0] aluop;
+wire [7:0] op, op_addr, acc_data, mem_data, alu_data, mux_data;
+
 assign acc_out = acc_data;
 
-always @ *
-    op <= op_reg;
-
-// ------- Module Set -------
 pc pc(
     .jump(jump|(branch&zero)),
     .clk(clk),//!
@@ -51,7 +32,7 @@ opram_control opram_control(
     .rst(rst),
     .addr(op_addr),
     .writeop(writeop),
-    .op(op_reg)
+    .op(op)
     );
 
 control control(
@@ -75,21 +56,11 @@ mem_control mem_control(
     .data(mem_data)
     );
 
-imm_builder imm_builder(
-    .in(op[3:0]),
-    .out(imm_data)
-    );
-
-sll_builder sll_builder(
-    .in(acc_data),
-    .out(sll_data)
-    );
-
 mux mux(
     .a(mem_data),
-    .b(imm_data),
+    .b({4'b0000, op[3:0]}),
     .c(alu_data),
-    .d(sll_data),
+    .d({acc_data[3:0], 4'b0000}),
     .sel(accdst),
     .out(mux_data)
     );
@@ -110,5 +81,5 @@ alu alu(
     .ans(alu_data),
     .zero(zero)
     );
-// --------------------------
+
 endmodule

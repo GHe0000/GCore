@@ -1,68 +1,199 @@
 //
 //Written by GowinSynthesis
 //Product Version "GowinSynthesis V1.9.7.01Beta"
-//Tue Jan 26 20:24:38 2021
+//Thu Jan 28 21:54:07 2021
 
 //Source file index table:
 //file0 "\/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v"
+//file1 "\/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v"
 `timescale 100 ps/100 ps
-module top (
-  in,
-  out
+module opram (
+  write_d,
+  clk_d,
+  n12_7,
+  rst_d,
+  writeop_d,
+  addr_d,
+  op_d
 )
 ;
-input [7:0] in;
-output [7:0] out;
-wire [7:4] out_d;
+input write_d;
+input clk_d;
+input n12_7;
+input rst_d;
+input [7:0] writeop_d;
+input [7:0] addr_d;
+output [7:0] op_d;
+wire [31:8] DO;
 wire VCC;
 wire GND;
-  IBUF in_0_ibuf (
-    .O(out_d[4]),
-    .I(in[0]) 
+  SP sp_inst_0 (
+    .DO({DO[31:8],op_d[7:0]}),
+    .DI({GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,writeop_d[7:0]}),
+    .BLKSEL({GND,GND,GND}),
+    .AD({GND,GND,GND,addr_d[7:0],GND,GND,GND}),
+    .WRE(write_d),
+    .CLK(clk_d),
+    .CE(VCC),
+    .OCE(n12_7),
+    .RESET(rst_d) 
 );
-  IBUF in_1_ibuf (
-    .O(out_d[5]),
-    .I(in[1]) 
+defparam sp_inst_0.BIT_WIDTH=8;
+defparam sp_inst_0.BLK_SEL=3'b000;
+defparam sp_inst_0.READ_MODE=1'b0;
+defparam sp_inst_0.RESET_MODE="SYNC";
+defparam sp_inst_0.WRITE_MODE=2'b00;
+  VCC VCC_cZ (
+    .V(VCC)
 );
-  IBUF in_2_ibuf (
-    .O(out_d[6]),
-    .I(in[2]) 
+  GND GND_cZ (
+    .G(GND)
 );
-  IBUF in_3_ibuf (
-    .O(out_d[7]),
-    .I(in[3]) 
+endmodule /* opram */
+module top (
+  write,
+  writeop,
+  clk,
+  op,
+  addr,
+  rst
+)
+;
+input write;
+input [7:0] writeop;
+input clk;
+output [7:0] op;
+input [7:0] addr;
+input rst;
+wire write_d;
+wire clk_d;
+wire rst_d;
+wire n12_7;
+wire [7:0] writeop_d;
+wire [7:0] addr_d;
+wire [7:0] op_d;
+wire VCC;
+wire GND;
+  IBUF write_ibuf (
+    .O(write_d),
+    .I(write) 
 );
-  OBUF out_0_obuf (
-    .O(out[0]),
-    .I(GND) 
+  IBUF writeop_0_ibuf (
+    .O(writeop_d[0]),
+    .I(writeop[0]) 
 );
-  OBUF out_1_obuf (
-    .O(out[1]),
-    .I(GND) 
+  IBUF writeop_1_ibuf (
+    .O(writeop_d[1]),
+    .I(writeop[1]) 
 );
-  OBUF out_2_obuf (
-    .O(out[2]),
-    .I(GND) 
+  IBUF writeop_2_ibuf (
+    .O(writeop_d[2]),
+    .I(writeop[2]) 
 );
-  OBUF out_3_obuf (
-    .O(out[3]),
-    .I(GND) 
+  IBUF writeop_3_ibuf (
+    .O(writeop_d[3]),
+    .I(writeop[3]) 
 );
-  OBUF out_4_obuf (
-    .O(out[4]),
-    .I(out_d[4]) 
+  IBUF writeop_4_ibuf (
+    .O(writeop_d[4]),
+    .I(writeop[4]) 
 );
-  OBUF out_5_obuf (
-    .O(out[5]),
-    .I(out_d[5]) 
+  IBUF writeop_5_ibuf (
+    .O(writeop_d[5]),
+    .I(writeop[5]) 
 );
-  OBUF out_6_obuf (
-    .O(out[6]),
-    .I(out_d[6]) 
+  IBUF writeop_6_ibuf (
+    .O(writeop_d[6]),
+    .I(writeop[6]) 
 );
-  OBUF out_7_obuf (
-    .O(out[7]),
-    .I(out_d[7]) 
+  IBUF writeop_7_ibuf (
+    .O(writeop_d[7]),
+    .I(writeop[7]) 
+);
+  IBUF clk_ibuf (
+    .O(clk_d),
+    .I(clk) 
+);
+  IBUF addr_0_ibuf (
+    .O(addr_d[0]),
+    .I(addr[0]) 
+);
+  IBUF addr_1_ibuf (
+    .O(addr_d[1]),
+    .I(addr[1]) 
+);
+  IBUF addr_2_ibuf (
+    .O(addr_d[2]),
+    .I(addr[2]) 
+);
+  IBUF addr_3_ibuf (
+    .O(addr_d[3]),
+    .I(addr[3]) 
+);
+  IBUF addr_4_ibuf (
+    .O(addr_d[4]),
+    .I(addr[4]) 
+);
+  IBUF addr_5_ibuf (
+    .O(addr_d[5]),
+    .I(addr[5]) 
+);
+  IBUF addr_6_ibuf (
+    .O(addr_d[6]),
+    .I(addr[6]) 
+);
+  IBUF addr_7_ibuf (
+    .O(addr_d[7]),
+    .I(addr[7]) 
+);
+  IBUF rst_ibuf (
+    .O(rst_d),
+    .I(rst) 
+);
+  OBUF op_0_obuf (
+    .O(op[0]),
+    .I(op_d[0]) 
+);
+  OBUF op_1_obuf (
+    .O(op[1]),
+    .I(op_d[1]) 
+);
+  OBUF op_2_obuf (
+    .O(op[2]),
+    .I(op_d[2]) 
+);
+  OBUF op_3_obuf (
+    .O(op[3]),
+    .I(op_d[3]) 
+);
+  OBUF op_4_obuf (
+    .O(op[4]),
+    .I(op_d[4]) 
+);
+  OBUF op_5_obuf (
+    .O(op[5]),
+    .I(op_d[5]) 
+);
+  OBUF op_6_obuf (
+    .O(op[6]),
+    .I(op_d[6]) 
+);
+  OBUF op_7_obuf (
+    .O(op[7]),
+    .I(op_d[7]) 
+);
+  INV n12_s2 (
+    .O(n12_7),
+    .I(write_d) 
+);
+  opram opram (
+    .write_d(write_d),
+    .clk_d(clk_d),
+    .n12_7(n12_7),
+    .rst_d(rst_d),
+    .writeop_d(writeop_d[7:0]),
+    .addr_d(addr_d[7:0]),
+    .op_d(op_d[7:0])
 );
   VCC VCC_cZ (
     .V(VCC)

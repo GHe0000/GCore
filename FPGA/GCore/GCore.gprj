@@ -8,14 +8,12 @@
         <File path="src/accum.v" type="file.verilog" enable="1"/>
         <File path="src/alu.v" type="file.verilog" enable="1"/>
         <File path="src/control.v" type="file.verilog" enable="1"/>
-        <File path="src/imm_builder.v" type="file.verilog" enable="1"/>
         <File path="src/mem/mem.v" type="file.verilog" enable="1"/>
         <File path="src/mem_control.v" type="file.verilog" enable="1"/>
         <File path="src/mux.v" type="file.verilog" enable="1"/>
         <File path="src/opram/opram.v" type="file.verilog" enable="1"/>
         <File path="src/opram_control.v" type="file.verilog" enable="1"/>
         <File path="src/pc.v" type="file.verilog" enable="1"/>
-        <File path="src/sll_builder.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>

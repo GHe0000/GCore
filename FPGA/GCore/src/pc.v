@@ -7,18 +7,16 @@ input jump, clk, rst;
     
 output [7:0] addr;
 
-reg[7:0] pc;
+reg[7:0] addr;
 
-assign addr = pc;
-
-always @(posedge clk)
+always @(posedge clk or posedge rst)
     begin
         if(rst)
-            pc <= 8'b0000_0000;
+            addr <= 8'b0000_0000;
         else
             if(jump)
-                pc <= jumpaddr;
+                addr <= jumpaddr;
             else
-                pc <= pc + 1;
+                addr <= addr + 8'b0000_0001;
     end
 endmodule

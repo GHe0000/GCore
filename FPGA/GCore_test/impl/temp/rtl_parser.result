@@ -5,6 +5,16 @@
   "InstName" : "top",
   "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
   "ModuleLine" : 3,
-  "ModuleName" : "top"
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+    "InstLine" : 12,
+    "InstName" : "opram",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "opram"
+   }
+  ]
  }
 ]

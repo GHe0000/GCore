@@ -1,11 +1,10 @@
 // No test list
 
 top.v
-control.v
 
-opram_control.v
-mem_control.v
-
+//control.v
+//opram_control.v
+//mem_control.v
 //imm_builder.v
 //mux.v
 //sll_builder.v
