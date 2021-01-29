@@ -1,19 +1,19 @@
 //
 //Written by GowinSynthesis
 //Product Version "GowinSynthesis V1.9.7.01Beta"
-//Thu Jan 28 23:00:43 2021
+//Fri Jan 29 21:32:15 2021
 
 //Source file index table:
 //file0 "\/home/ubantu/Code/GCore/FPGA/GCore/src/accum.v"
 //file1 "\/home/ubantu/Code/GCore/FPGA/GCore/src/alu.v"
 //file2 "\/home/ubantu/Code/GCore/FPGA/GCore/src/control.v"
-//file3 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v"
-//file4 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v"
-//file5 "\/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v"
-//file6 "\/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v"
-//file7 "\/home/ubantu/Code/GCore/FPGA/GCore/src/top.v"
-//file8 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v"
-//file9 "\/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v"
+//file3 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v"
+//file4 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v"
+//file5 "\/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v"
+//file6 "\/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v"
+//file7 "\/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v"
+//file8 "\/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v"
+//file9 "\/home/ubantu/Code/GCore/FPGA/GCore/src/top.v"
 `timescale 100 ps/100 ps
 module pc (
   clk_d,

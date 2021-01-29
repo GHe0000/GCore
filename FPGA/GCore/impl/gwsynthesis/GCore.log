@@ -3,13 +3,13 @@ Running parser ...
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/accum.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/alu.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/control.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v'
 Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore/src/top.v":3)
 Compiling module 'pc'("/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v":3)
 Compiling module 'opram_control'("/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v":4)
