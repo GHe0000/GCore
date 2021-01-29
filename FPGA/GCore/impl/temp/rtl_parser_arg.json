@@ -13,11 +13,19 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v",
    "Type" : "verilog"
   },
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v",
    "Type" : "verilog"
   },
   {
@@ -30,14 +38,6 @@
   },
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v",
    "Type" : "verilog"
   }
  ],
