@@ -7,13 +7,18 @@
     <FileList>
         <File path="src/accum.v" type="file.verilog" enable="1"/>
         <File path="src/alu.v" type="file.verilog" enable="1"/>
+        <File path="src/clk_in_test.v" type="file.verilog" enable="1"/>
+        <File path="src/clock.v" type="file.verilog" enable="1"/>
         <File path="src/control.v" type="file.verilog" enable="1"/>
         <File path="src/mem/mem.v" type="file.verilog" enable="1"/>
         <File path="src/mem_control.v" type="file.verilog" enable="1"/>
         <File path="src/mux.v" type="file.verilog" enable="1"/>
-        <File path="src/opram/opram.v" type="file.verilog" enable="1"/>
+        <File path="src/opram/opram.v" type="file.verilog" enable="0"/>
         <File path="src/opram_control.v" type="file.verilog" enable="1"/>
+        <File path="src/opram_test/opram_test.v" type="file.verilog" enable="1"/>
         <File path="src/pc.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/GCore.cst" type="file.cst" enable="1"/>
+        <File path="src/test1.mi" type="file.other" enable="1"/>
     </FileList>
 </Project>

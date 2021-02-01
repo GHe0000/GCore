@@ -1,15 +1,31 @@
 [
  {
   "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-  "InstLine" : 3,
+  "InstLine" : 6,
   "InstName" : "top",
   "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-  "ModuleLine" : 3,
+  "ModuleLine" : 6,
   "ModuleName" : "top",
   "SubInsts" : [
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 21,
+    "InstLine" : 29,
+    "InstName" : "clk_in_test",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v",
+    "ModuleLine" : 8,
+    "ModuleName" : "clk_in_test"
+   },
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
+    "InstLine" : 35,
+    "InstName" : "clock",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clock.v",
+    "ModuleLine" : 12,
+    "ModuleName" : "clock"
+   },
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
+    "InstLine" : 59,
     "InstName" : "pc",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v",
     "ModuleLine" : 3,
@@ -17,7 +33,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 29,
+    "InstLine" : 67,
     "InstName" : "opram_control",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v",
     "ModuleLine" : 4,
@@ -27,7 +43,7 @@
       "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v",
       "InstLine" : 13,
       "InstName" : "opram",
-      "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram/opram.v",
+      "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v",
       "ModuleLine" : 9,
       "ModuleName" : "opram"
      }
@@ -35,7 +51,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 38,
+    "InstLine" : 94,
     "InstName" : "control",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/control.v",
     "ModuleLine" : 22,
@@ -43,7 +59,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 49,
+    "InstLine" : 105,
     "InstName" : "mem_control",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v",
     "ModuleLine" : 4,
@@ -61,7 +77,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 59,
+    "InstLine" : 115,
     "InstName" : "mux",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v",
     "ModuleLine" : 3,
@@ -69,7 +85,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 68,
+    "InstLine" : 124,
     "InstName" : "accum",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/accum.v",
     "ModuleLine" : 3,
@@ -77,7 +93,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-    "InstLine" : 76,
+    "InstLine" : 132,
     "InstName" : "alu",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/alu.v",
     "ModuleLine" : 11,

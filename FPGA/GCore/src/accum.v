@@ -10,9 +10,9 @@ reg[7:0] accum;
 
 assign data = accum;
 
-always @(posedge clk)
+always @(posedge clk or negedge rst)
     begin
-        if(rst)
+        if(!rst)
             accum <= 8'b0000_0000;
         else
             if(write)

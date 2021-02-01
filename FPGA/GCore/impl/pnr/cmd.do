@@ -1,0 +1,10 @@
+-d /home/ubantu/Code/GCore/FPGA/GCore/impl/gwsynthesis/GCore.vg
+-p GW1N-1-QFN48-6
+-pn GW1N-LV1QN48C6/I5
+-cst /home/ubantu/Code/GCore/FPGA/GCore/src/GCore.cst
+-cfg /home/ubantu/Code/GCore/FPGA/GCore/impl/pnr/device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error

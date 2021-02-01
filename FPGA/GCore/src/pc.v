@@ -9,9 +9,9 @@ output [7:0] addr;
 
 reg[7:0] addr;
 
-always @(posedge clk or posedge rst)
+always @(posedge clk or negedge rst)
     begin
-        if(rst)
+        if(!rst)
             addr <= 8'b0000_0000;
         else
             if(jump)

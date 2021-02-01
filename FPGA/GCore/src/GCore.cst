@@ -1,0 +1,28 @@
+//Copyright (C)2014-2020 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.7.01Beta
+//Part Number: GW1N-LV1QN48C6/I5
+//Device: GW1N-1
+//Created Time: Mon 02 01 11:59:17 2021
+
+IO_LOC "acc_out[7]" 23;
+IO_PORT "acc_out[7]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[6]" 22;
+IO_PORT "acc_out[6]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[5]" 21;
+IO_PORT "acc_out[5]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[4]" 20;
+IO_PORT "acc_out[4]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[3]" 19;
+IO_PORT "acc_out[3]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[2]" 18;
+IO_PORT "acc_out[2]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[1]" 17;
+IO_PORT "acc_out[1]" PULL_MODE=UP DRIVE=8;
+IO_LOC "acc_out[0]" 16;
+IO_PORT "acc_out[0]" PULL_MODE=UP DRIVE=8;
+IO_LOC "rst" 15;
+IO_PORT "rst" PULL_MODE=UP;
+IO_LOC "clk" 35;
+IO_PORT "clk" PULL_MODE=UP;

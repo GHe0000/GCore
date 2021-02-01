@@ -16,7 +16,7 @@ mem mem(
     .clk(clk), //input clk
     .oce(read), //input oce
     .ce(1'b1), //input ce
-    .reset(rst), //input reset
+    .reset(!rst), //input reset
     .wre(write), //input wre
     .ad(addr), //input [1:0] ad
     .din(writedata) //input [7:0] din
