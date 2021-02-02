@@ -1,7 +1,8 @@
 // Test
 
 `define wide 24
-`define c 24'd600_0000
+`define c  24'd600_0000
+`define c2 24'd300_0000
 `define zero 24'd0
 `define d 24'd1
 
@@ -32,7 +33,7 @@ always @(posedge clk_in or negedge rst)
             clk_out <= 1'b0;
         else
             begin
-                if (counter == `c)
+                if ((counter < `c)&(counter > (`c2)))
                     clk_out <= 1'b1;
                 else
                     clk_out <= 1'b0;

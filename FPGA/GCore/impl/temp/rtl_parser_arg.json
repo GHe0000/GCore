@@ -21,6 +21,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v",
    "Type" : "verilog"
   },
@@ -37,15 +41,15 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v",
    "Type" : "verilog"
   },
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v",
    "Type" : "verilog"
   }
  ],

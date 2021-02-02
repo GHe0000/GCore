@@ -1,18 +1,21 @@
 // GCore CPU Top
 
-
-//
-//module top(clk, rst, write, writeop, writeaddr, write_rst, acc_out);
-module top(clk, rst, acc_out);
+//module top(clk, rst, write, writeop, writeaddr, write_rst, out);
+module top(clk, rst, out, clk_out, sel_out);
 
 input clk;
 input rst;
+
+//Test led out select
+input sel_out;
 
 //input write, write_rst;
 //input [7:0] writeop;
 //input [7:0] writeaddr; 
 
-output [7:0] acc_out;
+output clk_out;
+
+output [7:0] out;
 
 wire jump, branch, zero, accwrite,memwrite, memread;
 wire [1:0] accdst;
@@ -21,16 +24,25 @@ wire [2:0] aluop;
 wire [7:0] op, op_addr, acc_data, mem_data, alu_data, mux_data;
 
 wire pc_clk, opram_clk, mem_clk, acc_clk, alu_clk;
+wire out_clk;
+wire clk_t;
 
-wire clk_t; //Test clk
+assign clk_out = !(out_clk);
 
-assign acc_out = acc_data;
+led_out led_out(
+    .acc(acc_data),
+    .addr(op_addr),
+    .out(out),
+    .sel(sel_out),
+    .clk(out_clk)
+    );
+
 
 clk_in_test clk_in_test(
     .clk_in(clk),
     .rst(rst),
     .clk_out(clk_t)
-);//Test module
+    );//Test module
 
 clock clock(
     .clk_in(clk_t),
@@ -39,9 +51,10 @@ clock clock(
     .mem(mem_clk),
     .acc(acc_clk),
     .alu(alu_clk),
+    .out(out_clk),
     .ena(1'b1),
     .rst(rst)
-);
+    );
 
 /*
 clock clock(
@@ -67,7 +80,7 @@ pc pc(
 opram_control opram_control(
     .write(1'b0),
     .clk(opram_clk),//!
-    .rst(1'b0),
+    .rst(1'b1),
     .addr(op_addr),
     .writeop(8'b0000_0000),
     .op(op)
@@ -91,6 +104,7 @@ opram_control opram_control(
     .op(op)
     );
 */
+
 control control(
     .op(op[7:4]),
     .jump(jump),

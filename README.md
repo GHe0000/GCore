@@ -30,7 +30,4 @@
 | SLT   | 1110  | E    |
 | BZ    | 1111  | F    |
 
----
-
-## To Do  
-Clock     
+ja

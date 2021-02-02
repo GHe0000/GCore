@@ -9,7 +9,7 @@ version=3.0
 [Config]
 DEPTH=256
 LANG=0
-MEM_FILE=../test1.mi
+MEM_FILE=../test.mi
 READ=0
 RESET_MODE=true
 WIDTH=8

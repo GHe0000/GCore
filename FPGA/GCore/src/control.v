@@ -38,14 +38,20 @@ always @(op)
                 aluop<=op[2:0];
                 if(op==`BZ)
                     begin
+                        jump<=0;
                         branch<=1;
+                        accwrite<=0;
                         memread<=1;
+                        memwrite<=0;
                     end
                 else
                     begin
-                        memread<=1;
-                        accdst<=`ALUtoAcc;
+                        jump<=0;
+                        branch<=0;
                         accwrite<=1;
+                        memread<=1;
+                        memwrite<=0;
+                        accdst<=`ALUtoAcc;
                     end
             end
         else 
@@ -54,27 +60,45 @@ always @(op)
                     `JUMP:
                         begin
                             jump<=1;
+                            branch<=0;
+                            accwrite<=0;
                             memread<=1;
+                            memwrite<=0;
                         end
                     `SAVE:
                         begin
+                            jump<=0;
+                            branch<=0;
+                            accwrite<=0;
+                            memread<=0;
                             memwrite<=1;
                         end
                     `LOAD:
                         begin
-                            accdst<=`MemtoAcc;
+                            jump<=0;
+                            branch<=0;
                             accwrite<=1;
                             memread<=1;
+                            memwrite<=0;
+                            accdst<=`MemtoAcc;
                         end
                     `LOADI:
                         begin
-                            accdst<=`ImmtoAcc;
+                            jump<=0;
+                            branch<=0;
                             accwrite<=1;
+                            memread<=0;
+                            memwrite<=0;
+                            accdst<=`ImmtoAcc;
                         end    
                     `SLL:
-                        begin      
-                            accdst<=`SLLtoAcc;
+                        begin 
+                            jump<=0;
+                            branch<=0;
                             accwrite<=1;
+                            memread<=0;
+                            memwrite<=0;     
+                            accdst<=`SLLtoAcc;
                         end
                 endcase
             end

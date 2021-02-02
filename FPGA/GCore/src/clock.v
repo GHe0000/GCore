@@ -9,13 +9,13 @@
 `define s7 3'b110
 `define s8 3'b111
 
-module clock(clk_in, pc, opram, mem, acc, alu, ena, rst);
+module clock(clk_in, pc, opram, mem, acc, alu, ena, rst, out);
 
 input clk_in, ena, rst;
 
-output pc, opram, mem, acc, alu;
+output pc, opram, mem, acc, alu, out;
 
-reg pc, opram, mem, acc, alu;
+reg pc, opram, mem, acc, alu, out;
 reg [2:0] state;
 
 always @(posedge clk_in or negedge rst)
@@ -28,6 +28,7 @@ always @(posedge clk_in or negedge rst)
                 mem <= 1'b0;
                 acc <= 1'b0;
                 alu <= 1'b0;
+                out <= 1'b0;
             end
         else
             begin
@@ -41,6 +42,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s2;
                                  end
                              `s2:
@@ -50,6 +52,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s3;
                                  end
                              `s3:
@@ -59,6 +62,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b1;
                                      acc <= 1'b1;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s4;
                                  end
                              `s4:
@@ -68,6 +72,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b1;
+                                     out <= 1'b0;
                                      state <= `s5;
                                  end
                              `s5:
@@ -77,6 +82,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b1;
                                      acc <= 1'b1;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s6;
                                  end
                              `s6:
@@ -86,6 +92,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s7;
                                  end
                              `s7:
@@ -95,6 +102,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b0;
+                                     out <= 1'b0;
                                      state <= `s8;
                                  end
                              `s8:
@@ -104,6 +112,7 @@ always @(posedge clk_in or negedge rst)
                                      mem <= 1'b0;
                                      acc <= 1'b0;
                                      alu <= 1'b0;
+                                     out <= 1'b1;
                                      state <= `s1;
                                  end
                              default:

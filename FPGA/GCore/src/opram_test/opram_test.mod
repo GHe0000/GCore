@@ -14,4 +14,4 @@
 -read_mode bypass
 -write_mode normal
 -reset_mode sync
--init_file /home/ubantu/Code/GCore/FPGA/GCore/src/test1.mi
+-init_file /home/ubantu/Code/GCore/FPGA/GCore/src/test.mi

@@ -2,18 +2,20 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/accum.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/alu.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clock.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/control.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v'
-Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore/src/top.v":6)
-Compiling module 'clk_in_test'("/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v":8)
+Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore/src/top.v":4)
+Compiling module 'led_out'("/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v":3)
+Compiling module 'clk_in_test'("/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v":9)
 Compiling module 'clock'("/home/ubantu/Code/GCore/FPGA/GCore/src/clock.v":12)
 Compiling module 'pc'("/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v":3)
 Compiling module 'opram_control'("/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v":4)

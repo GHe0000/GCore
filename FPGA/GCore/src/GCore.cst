@@ -4,24 +4,28 @@
 //GOWIN Version: 1.9.7.01Beta
 //Part Number: GW1N-LV1QN48C6/I5
 //Device: GW1N-1
-//Created Time: Mon 02 01 11:59:17 2021
+//Created Time: Tue 02 02 20:56:56 2021
 
-IO_LOC "acc_out[7]" 23;
-IO_PORT "acc_out[7]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[6]" 22;
-IO_PORT "acc_out[6]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[5]" 21;
-IO_PORT "acc_out[5]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[4]" 20;
-IO_PORT "acc_out[4]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[3]" 19;
-IO_PORT "acc_out[3]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[2]" 18;
-IO_PORT "acc_out[2]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[1]" 17;
-IO_PORT "acc_out[1]" PULL_MODE=UP DRIVE=8;
-IO_LOC "acc_out[0]" 16;
-IO_PORT "acc_out[0]" PULL_MODE=UP DRIVE=8;
+IO_LOC "clk_out" 16;
+IO_PORT "clk_out" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[7]" 38;
+IO_PORT "out[7]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[6]" 39;
+IO_PORT "out[6]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[5]" 40;
+IO_PORT "out[5]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[4]" 41;
+IO_PORT "out[4]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[3]" 42;
+IO_PORT "out[3]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[2]" 43;
+IO_PORT "out[2]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[1]" 44;
+IO_PORT "out[1]" PULL_MODE=UP DRIVE=8;
+IO_LOC "out[0]" 45;
+IO_PORT "out[0]" PULL_MODE=UP DRIVE=8;
+IO_LOC "sel_out" 20;
+IO_PORT "sel_out" PULL_MODE=UP;
 IO_LOC "rst" 15;
 IO_PORT "rst" PULL_MODE=UP;
 IO_LOC "clk" 35;
