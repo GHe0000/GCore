@@ -19,6 +19,9 @@
 `define ALUtoAcc 2'b10
 `define SLLtoAcc 2'b11
 
+`define mux_off 2'bxx
+`define alu_off 3'bxxx
+
 module control(op, jump, branch, aluop, accwrite, accdst, memread, memwrite);
 
 input [3:0] op;
@@ -43,6 +46,7 @@ always @(op)
                         accwrite<=0;
                         memread<=1;
                         memwrite<=0;
+                        accdst<=`mux_off;
                     end
                 else
                     begin
@@ -54,7 +58,8 @@ always @(op)
                         accdst<=`ALUtoAcc;
                     end
             end
-        else 
+        else
+            aluop<=`alu_off; 
             begin
                 case(op)
                     `JUMP:
@@ -64,6 +69,7 @@ always @(op)
                             accwrite<=0;
                             memread<=1;
                             memwrite<=0;
+                            accdst<=`mux_off;
                         end
                     `SAVE:
                         begin
@@ -72,6 +78,7 @@ always @(op)
                             accwrite<=0;
                             memread<=0;
                             memwrite<=1;
+                            accdst<=`mux_off;
                         end
                     `LOAD:
                         begin

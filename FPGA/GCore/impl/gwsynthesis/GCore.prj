@@ -14,9 +14,9 @@
         <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v" type="verilog"/>
+        <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/top.v" type="verilog"/>
-        <File path="/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>

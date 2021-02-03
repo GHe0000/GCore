@@ -62,7 +62,7 @@
     "InstLine" : 108,
     "InstName" : "control",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore/src/control.v",
-    "ModuleLine" : 22,
+    "ModuleLine" : 25,
     "ModuleName" : "control"
    },
    {

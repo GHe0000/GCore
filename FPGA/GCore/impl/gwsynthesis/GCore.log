@@ -10,9 +10,9 @@ Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v'
 Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore/src/top.v":4)
 Compiling module 'led_out'("/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v":3)
 Compiling module 'clk_in_test'("/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v":9)
@@ -20,7 +20,7 @@ Compiling module 'clock'("/home/ubantu/Code/GCore/FPGA/GCore/src/clock.v":12)
 Compiling module 'pc'("/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v":3)
 Compiling module 'opram_control'("/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v":4)
 Compiling module 'opram'("/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v":9)
-Compiling module 'control'("/home/ubantu/Code/GCore/FPGA/GCore/src/control.v":22)
+Compiling module 'control'("/home/ubantu/Code/GCore/FPGA/GCore/src/control.v":25)
 Compiling module 'mem_control'("/home/ubantu/Code/GCore/FPGA/GCore/src/mem_control.v":4)
 Compiling module 'mem'("/home/ubantu/Code/GCore/FPGA/GCore/src/mem/mem.v":9)
 Compiling module 'mux'("/home/ubantu/Code/GCore/FPGA/GCore/src/mux.v":3)
