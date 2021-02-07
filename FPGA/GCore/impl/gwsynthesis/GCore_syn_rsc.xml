@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module name="top" Lut="1">
- <SubModule name="led_out" Register="8" Lut="8"/>
- <SubModule name="clk_in_test" Register="24" Lut="56"/>
- <SubModule name="clock" Register="8" Lut="8"/>
- <SubModule name="pc" Register="8" Lut="17"/>
+ <SubModule name="led_out" Register="10" Lut="9"/>
+ <SubModule name="clk_in_test" Register="25" Lut="60"/>
+ <SubModule name="clk_gen" Register="8" Lut="8"/>
+ <SubModule name="pc" Register="9" Lut="19"/>
  <SubModule name="accum" Register="8"/>
- <SubModule name="alu" Register="8" Alu="16" Lut="22"/>
- <SubModule name="control" Register="7" Lut="10"/>
- <SubModule name="mux" Lut="16"/>
+ <SubModule name="alu" Register="8" Alu="16" Lut="21"/>
+ <SubModule name="control" Lut="3"/>
+ <SubModule name="mux" Lut="19"/>
  <SubModule name="opram_control">
   <SubModule name="opram" Lut="1" Bsram="1"/>
  </SubModule>

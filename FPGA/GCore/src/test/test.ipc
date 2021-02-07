@@ -1,0 +1,16 @@
+[General]
+ipc_version=4
+file=test
+module=opram
+target_device=gw1n1-004
+type=ram_sp
+version=3.0
+
+[Config]
+DEPTH=256
+LANG=0
+MEM_FILE=../test.mi
+READ=0
+RESET_MODE=true
+WIDTH=8
+WRITE=0

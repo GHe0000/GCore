@@ -13,10 +13,6 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clock.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/control.v",
    "Type" : "verilog"
   },
@@ -41,15 +37,19 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/opram_test/opram_test.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v",
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/test/test.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_gen.v",
    "Type" : "verilog"
   }
  ],

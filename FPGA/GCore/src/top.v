@@ -7,7 +7,8 @@ input clk;
 input rst;
 
 //Test led out select
-input sel_out;
+//input sel_out;
+output sel_out;
 
 //input write, write_rst;
 //input [7:0] writeop;
@@ -30,13 +31,22 @@ wire clk_t;
 assign clk_out = !(out_clk);
 
 led_out led_out(
+    .acc(mem_data),
+    .addr(op),
+    .out(out),
+    .sel_out(sel_out),
+    .clk(out_clk)
+    );
+
+/*
+led_out led_out(
     .acc(acc_data),
-    .addr(op_addr),
+    .addr(op),
     .out(out),
     .sel(sel_out),
     .clk(out_clk)
     );
-
+*/
 
 clk_in_test clk_in_test(
     .clk_in(clk),
@@ -44,7 +54,7 @@ clk_in_test clk_in_test(
     .clk_out(clk_t)
     );//Test module
 
-clock clock(
+clk_gen clk_gen(
     .clk_in(clk_t),
     .pc(pc_clk),
     .opram(opram_clk),
@@ -128,9 +138,9 @@ mem_control mem_control(
 
 mux mux(
     .a(mem_data),
-    .b({4'b0000, op[3:0]}),
+    .b({4'b0, op[3:0]}),
     .c(alu_data),
-    .d({acc_data[3:0], 4'b0000}),
+    .d({acc_data[3:0], 4'b0}),
     .sel(accdst),
     .out(mux_data)
     );

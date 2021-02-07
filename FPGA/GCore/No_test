@@ -1,6 +1,6 @@
 // No test list
 
-top.v
+//top.v
 
 //control.v
 //opram_control.v
@@ -11,4 +11,3 @@ top.v
 //pc.v
 //accum.v
 //alu.v
-

@@ -4,8 +4,10 @@
 //GOWIN Version: 1.9.7.01Beta
 //Part Number: GW1N-LV1QN48C6/I5
 //Device: GW1N-1
-//Created Time: Wed 02 03 10:15:33 2021
+//Created Time: Sun 02 07 16:10:14 2021
 
+IO_LOC "sel_out" 21;
+IO_PORT "sel_out" PULL_MODE=UP DRIVE=8;
 IO_LOC "clk_out" 16;
 IO_PORT "clk_out" PULL_MODE=UP DRIVE=8;
 IO_LOC "out[7]" 38;
@@ -24,8 +26,6 @@ IO_LOC "out[1]" 43;
 IO_PORT "out[1]" PULL_MODE=DOWN DRIVE=8;
 IO_LOC "out[0]" 45;
 IO_PORT "out[0]" PULL_MODE=DOWN DRIVE=8;
-IO_LOC "sel_out" 20;
-IO_PORT "sel_out" PULL_MODE=UP;
 IO_LOC "rst" 15;
 IO_PORT "rst" PULL_MODE=UP;
 IO_LOC "clk" 35;

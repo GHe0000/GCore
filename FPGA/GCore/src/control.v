@@ -1,27 +1,5 @@
 // CONTROLLER
 
-`define NOP   4'b0000
-`define JUMP  4'b0001
-`define SAVE  4'b0010
-`define LOAD  4'b0011
-`define LOADI 4'b0100
-`define SLL   4'b0101
-`define ADD   4'b1000
-`define SUB   4'b1001
-`define AND   4'b1010
-`define OR    4'b1011
-`define XOR   4'b1100
-`define SLT   4'b1110
-`define BZ    4'b1111
-
-`define MemtoAcc 2'b00
-`define ImmtoAcc 2'b01
-`define ALUtoAcc 2'b10
-`define SLLtoAcc 2'b11
-
-`define mux_off 2'bxx
-`define alu_off 3'bxxx
-
 module control(op, jump, branch, aluop, accwrite, accdst, memread, memwrite);
 
 input [3:0] op;
@@ -34,80 +12,249 @@ reg [2:0] aluop;
 reg [1:0] accdst;
 reg jump, branch, accwrite, memread, memwrite;
 
+parameter NOP   = 4'b0000,
+          JUMP  = 4'b0001,
+          SAVE  = 4'b0010,
+          LOAD  = 4'b0011,
+          LOADI = 4'b0100,
+          SLL   = 4'b0101,
+          ADD   = 4'b1000,
+          SUB   = 4'b1001,
+          AND   = 4'b1010,
+          OR    = 4'b1011,
+          XOR   = 4'b1100,
+          SLT   = 4'b1110,
+          BZ    = 4'b1111,
+
+          MemtoAcc = 2'b00,
+          ImmtoAcc = 2'b01,
+          ALUtoAcc = 2'b10,
+          SLLtoAcc = 2'b11,
+
+          mux_off = 2'bxx,
+          alu_off = 3'bxx;
+
+/*
 always @(op)
     begin
         if(op[3]==1)
             begin
-                aluop<=op[2:0];
-                if(op==`BZ)
+                aluop = op[2:0];
+                if(op == BZ)
                     begin
-                        jump<=0;
-                        branch<=1;
-                        accwrite<=0;
-                        memread<=1;
-                        memwrite<=0;
-                        accdst<=`mux_off;
+                        jump = 0;
+                        branch = 1;
+                        accwrite = 0;
+                        memread = 1;
+                        memwrite = 0;
+                        accdst = mux_off;
                     end
                 else
                     begin
-                        jump<=0;
-                        branch<=0;
-                        accwrite<=1;
-                        memread<=1;
-                        memwrite<=0;
-                        accdst<=`ALUtoAcc;
+                        jump = 0;
+                        branch = 0;
+                        accwrite = 1;
+                        memread = 1;
+                        memwrite = 0;
+                        accdst = ALUtoAcc;
                     end
             end
         else
-            aluop<=`alu_off; 
+            aluop = alu_off; 
             begin
                 case(op)
-                    `JUMP:
+                    JUMP:
                         begin
-                            jump<=1;
-                            branch<=0;
-                            accwrite<=0;
-                            memread<=1;
-                            memwrite<=0;
-                            accdst<=`mux_off;
+                            jump = 1;
+                            branch = 0;
+                            accwrite = 0;
+                            memread = 1;
+                            memwrite = 0;
+                            accdst = mux_off;
                         end
-                    `SAVE:
+                    SAVE:
                         begin
-                            jump<=0;
-                            branch<=0;
-                            accwrite<=0;
-                            memread<=0;
-                            memwrite<=1;
-                            accdst<=`mux_off;
+                            jump = 0;
+                            branch = 0;
+                            accwrite = 0;
+                            memread = 0;
+                            memwrite = 1;
+                            accdst = mux_off;
                         end
-                    `LOAD:
+                    LOAD:
                         begin
-                            jump<=0;
-                            branch<=0;
-                            accwrite<=1;
-                            memread<=1;
-                            memwrite<=0;
-                            accdst<=`MemtoAcc;
+                            jump = 0;
+                            branch = 0;
+                            accwrite = 1;
+                            memread = 1;
+                            memwrite = 0;
+                            accdst = MemtoAcc;
                         end
-                    `LOADI:
+                    LOADI:
                         begin
-                            jump<=0;
-                            branch<=0;
-                            accwrite<=1;
-                            memread<=0;
-                            memwrite<=0;
-                            accdst<=`ImmtoAcc;
+                            jump = 0;
+                            branch = 0;
+                            accwrite = 1;
+                            memread = 0;
+                            memwrite = 0;
+                            accdst = ImmtoAcc;
                         end    
-                    `SLL:
+                    SLL:
                         begin 
-                            jump<=0;
-                            branch<=0;
-                            accwrite<=1;
-                            memread<=0;
-                            memwrite<=0;     
-                            accdst<=`SLLtoAcc;
+                            jump = 0;
+                            branch = 0;
+                            accwrite = 1;
+                            memread = 0;
+                            memwrite = 0;     
+                            accdst = SLLtoAcc;
+                        end
+                    default:
+                        begin
+                            jump = 0;
+                            branch = 0;
+                            accwrite = 0;
+                            memread = 0;
+                            memwrite = 0;     
+                            accdst = mux_off;
                         end
                 endcase
             end
-    end    
+    end
+*/
+
+always @(op)
+    begin
+        case(op)
+            ADD:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            SUB:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            AND:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            OR:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            XOR:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            SLT:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= ALUtoAcc;
+                    aluop <= op[2:0];
+                end
+            BZ:
+                begin
+                    jump <= 0;
+                    branch <= 1;
+                    accwrite <= 0;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= mux_off;
+                    aluop <= op[2:0];
+                end
+            JUMP:
+                begin
+                    jump <= 1;
+                    branch <= 0;
+                    accwrite <= 0;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= mux_off;
+                    aluop <= alu_off;
+                end
+            SAVE:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 0;
+                    memread <= 0;
+                    memwrite <= 1;
+                    accdst <= mux_off;
+                    aluop <= alu_off;
+                end
+            LOAD:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 1;
+                    memwrite <= 0;
+                    accdst <= MemtoAcc;
+                    aluop <= alu_off;
+                end
+            LOADI:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 0;
+                    memwrite <= 0;
+                    accdst <= ImmtoAcc;
+                    aluop <= alu_off;
+                end
+            SLL:
+                begin 
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 1;
+                    memread <= 0;
+                    memwrite <= 0; 
+                    accdst <= SLLtoAcc;
+                    aluop <= alu_off;
+                end
+            default:
+                begin
+                    jump <= 0;
+                    branch <= 0;
+                    accwrite <= 0;
+                    memread <= 0;
+                    memwrite <= 0; 
+                    accdst <= mux_off;
+                    aluop = alu_off;
+                end
+        endcase
+    end
 endmodule
