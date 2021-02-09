@@ -9,6 +9,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_gen.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v",
    "Type" : "verilog"
   },
@@ -46,10 +50,6 @@
   },
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/top.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_gen.v",
    "Type" : "verilog"
   }
  ],

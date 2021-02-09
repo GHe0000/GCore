@@ -5,7 +5,11 @@
     <Version>5</Version>
     <Device name="GW1N-1" pn="GW1N-LV1QN48C6/I5">gw1n1-004</Device>
     <FileList>
-        <File path="src/opram/opram.v" type="file.verilog" enable="1"/>
+        <File path="src/accum.v" type="file.verilog" enable="1"/>
+        <File path="src/alu.v" type="file.verilog" enable="1"/>
+        <File path="src/clk_gen.v" type="file.verilog" enable="1"/>
+        <File path="src/clk_test.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/GCore_test.cst" type="file.cst" enable="1"/>
     </FileList>
 </Project>

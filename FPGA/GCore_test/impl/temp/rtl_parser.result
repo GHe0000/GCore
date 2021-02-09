@@ -1,19 +1,43 @@
 [
  {
   "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
-  "InstLine" : 3,
+  "InstLine" : 6,
   "InstName" : "top",
   "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
-  "ModuleLine" : 3,
+  "ModuleLine" : 6,
   "ModuleName" : "top",
   "SubInsts" : [
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
-    "InstLine" : 12,
-    "InstName" : "opram",
-    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v",
-    "ModuleLine" : 9,
-    "ModuleName" : "opram"
+    "InstLine" : 19,
+    "InstName" : "clk_test",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "clk_test"
+   },
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+    "InstLine" : 25,
+    "InstName" : "clk_gen",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "clk_gen"
+   },
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+    "InstLine" : 33,
+    "InstName" : "accum",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "accum"
+   },
+   {
+    "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
+    "InstLine" : 41,
+    "InstName" : "alu",
+    "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "alu"
    }
   ]
  }

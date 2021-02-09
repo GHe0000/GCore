@@ -1,0 +1,29 @@
+Reading netlist file: "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/gwsynthesis/GCore_test.vg"
+Parsing netlist file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/gwsynthesis/GCore_test.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/ubantu/Code/GCore/FPGA/GCore_test/src/GCore_test.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Placement and routing completed
+Running timing analysis......
+[95%] Timing analysis completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/pnr/GCore_test.power.html" completed
+Generate file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/pnr/GCore_test.pin.html" completed
+Generate file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/pnr/GCore_test.rpt.html" completed
+Generate file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/pnr/GCore_test.rpt.txt" completed
+Generate file "/home/ubantu/Code/GCore/FPGA/GCore_test/impl/pnr/GCore_test.tr.html" completed
+Tue Feb  9 22:46:43 2021
+

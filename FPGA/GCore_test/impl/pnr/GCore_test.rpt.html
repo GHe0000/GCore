@@ -57,11 +57,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>/home/ubantu/Code/GCore/FPGA/GCore/impl/gwsynthesis/GCore.vg</td>
+<td>/home/ubantu/Code/GCore/FPGA/GCore_test/impl/gwsynthesis/GCore_test.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>/home/ubantu/Code/GCore/FPGA/GCore/src/GCore.cst</td>
+<td>/home/ubantu/Code/GCore/FPGA/GCore_test/src/GCore_test.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
@@ -81,7 +81,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Tue Feb  9 20:45:28 2021
+<td>Tue Feb  9 22:46:43 2021
 </td>
 </tr>
 <tr>
@@ -93,11 +93,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <!--<h1><a name="Summary">PnR Summaries</a></h1>-->
 <h2><a name="Placer">Placer:</a></h2>
 <p style="font-size: 14px;">Starting Placer:</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.068951 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.154888 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.024761 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 5.09819 secs</p>
-<p style="font-size: 14px;">Total REAL time to Placement completion: 5.34679 secs.<p><br/>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.063129 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.160777 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.008148 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 5.00347 secs</p>
+<p style="font-size: 14px;">Total REAL time to Placement completion: 5.23552 secs.<p><br/>
 <h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -107,12 +107,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>147/1152</td>
-<td>12%</td>
+<td>69/1152</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>147(131 LUT, 16 ALU, 0 ROM16)</td>
+<td>69(61 LUT, 8 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -122,8 +122,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>68/945</td>
-<td>7%</td>
+<td>45/945</td>
+<td>4%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as Latch</td>
@@ -132,8 +132,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>59/864</td>
-<td>6%</td>
+<td>45/864</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -142,22 +142,22 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as FF</td>
-<td>9/81</td>
-<td>11%</td>
+<td>0/81</td>
+<td>0%</td>
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>86/576</td>
-<td>14%</td>
+<td>44/576</td>
+<td>7%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
-<td>12</td>
+<td>11</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label">I/O Buf</td>
-<td>12</td>
+<td>11</td>
 <td>-</td>
 </tr>
 <tr>
@@ -167,7 +167,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Output Buf</td>
-<td>10</td>
+<td>9</td>
 <td>-</td>
 </tr>
 <tr>
@@ -182,8 +182,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>2 SP<br/></td>
-<td>50%</td>
+<td>0</td>
+<td>0%</td>
 </tr>
 <tr>
 <td class="label">PLL</td>
@@ -242,7 +242,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">bank 2</td>
-<td>3/12(25%)</td>
+<td>2/12(16%)</td>
 </tr>
 <tr>
 <td class="label">bank 3</td>
@@ -252,10 +252,10 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <br/>
 <h2><a name="Router">Router:</a></h2>
 <p  style="font-size: 14px;">Starting Router:</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 341 unrouted; &nbsp REAL time: 0.000304 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 179 unrouted; &nbsp REAL time: 0.13993 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.375043 secs</p>
-<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.515277 secs.</p><br/>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 148 unrouted; &nbsp REAL time: 0.000451 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 81 unrouted; &nbsp REAL time: 0.130281 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.189315 secs</p>
+<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.320047 secs.</p><br/>
 <h2><a name="Global_Clock_Usage_Summary">Global Clock Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -264,7 +264,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">PRIMARY</td>
-<td>7/8(87%)</td>
+<td>4/8(50%)</td>
 </tr>
 <tr>
 <td class="label">SECONDARY</td>
@@ -298,27 +298,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">clk_d</td>
 <td>PRIMARY</td>
-<td> RIGHT</td>
-</tr>
-<tr>
-<td class="label">clk_t</td>
-<td>PRIMARY</td>
-<td> RIGHT</td>
-</tr>
-<tr>
-<td class="label">pc_clk</td>
-<td>PRIMARY</td>
-<td> LEFT</td>
-</tr>
-<tr>
-<td class="label">opram_clk</td>
-<td>PRIMARY</td>
-<td> LEFT</td>
-</tr>
-<tr>
-<td class="label">mem_clk</td>
-<td>PRIMARY</td>
 <td> LEFT RIGHT</td>
+</tr>
+<tr>
+<td class="label">clock</td>
+<td>PRIMARY</td>
+<td> RIGHT</td>
 </tr>
 <tr>
 <td class="label">alu_clk</td>
@@ -326,9 +311,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td> LEFT RIGHT</td>
 </tr>
 <tr>
-<td class="label">out_clk</td>
+<td class="label">s[0]</td>
 <td>PRIMARY</td>
-<td> LEFT RIGHT</td>
+<td> RIGHT</td>
 </tr>
 </table>
 <br/>
@@ -362,7 +347,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>IOR5[A]</td>
 <td>LVCMOS18</td>
 <td>NA</td>
-<td>KEEPER</td>
+<td>UP</td>
 <td>NA</td>
 <td>NONE</td>
 <td>NA</td>
@@ -544,31 +529,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.8</td>
 </tr>
 <tr>
-<td class="label">clk_out</td>
+<td class="label">out_clk</td>
 <td></td>
 <td>16/2</td>
 <td>Y</td>
 <td>out</td>
 <td>IOB7[A]</td>
-<td>LVCMOS18</td>
-<td>8</td>
-<td>UP</td>
-<td>NA</td>
-<td>NA</td>
-<td>OFF</td>
-<td>FAST</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>1.8</td>
-</tr>
-<tr>
-<td class="label">sel_out</td>
-<td></td>
-<td>21/2</td>
-<td>Y</td>
-<td>out</td>
-<td>IOB14[A]</td>
 <td>LVCMOS18</td>
 <td>8</td>
 <td>UP</td>
@@ -827,7 +793,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.8</td>
 </tr>
 <td class="label">16/2</td>
-<td>clk_out</td>
+<td>out_clk</td>
 <td>out</td>
 <td>IOB7[A]</td>
 <td>LVCMOS18</td>
@@ -907,16 +873,16 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.8</td>
 </tr>
 <td class="label">21/2</td>
-<td>sel_out</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOB14[A]</td>
 <td>LVCMOS18</td>
-<td>8</td>
+<td>NA</td>
 <td>UP</td>
 <td>NA</td>
+<td>NONE</td>
 <td>NA</td>
-<td>OFF</td>
-<td>FAST</td>
+<td>NA</td>
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
@@ -1120,7 +1086,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>IOR5[A]</td>
 <td>LVCMOS18</td>
 <td>NA</td>
-<td>KEEPER</td>
+<td>UP</td>
 <td>NA</td>
 <td>NONE</td>
 <td>NA</td>
@@ -1261,7 +1227,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </table>
 <br/>
 <p style="font-size: 16px;"><b>  Placement and routing completed.</b></p>
-<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 182MB.</a></b></p>
+<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 176MB.</a></b></p>
 </div><!-- content -->
 </div><!-- main_wrapper -->
 </body>

@@ -31,8 +31,8 @@ wire clk_t;
 assign clk_out = !(out_clk);
 
 led_out led_out(
-    .acc(mem_data),
-    .addr(op),
+    .acc(acc_data),
+    .addr(mem_data),
     .out(out),
     .sel_out(sel_out),
     .clk(out_clk)

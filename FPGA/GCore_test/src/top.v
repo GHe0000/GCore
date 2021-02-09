@@ -1,23 +1,49 @@
 // Opram Control
 
-module top(write, writeop, clk, op, addr, rst);
+`define a 8'b1
+`define b 8'b101
 
-input [7:0] writeop;
-input [7:0] addr;
-input write, clk, rst;
+module top(out, clk, rst, out_clk);
 
-output [7:0] op;
-//--------Copy here to design--------
+input clk, rst;
 
-opram opram(
-    .dout(op), //output [7:0] dout
-    .clk(clk), //input clk
-    .oce(!(write)), //input oce
-    .ce(1'b1), //input ce
-    .reset(rst), //input reset
-    .wre(write), //input wre
-    .ad(addr), //input [2:0] ad
-    .din(writeop) //input [7:0] din
-);
-//--------Copy end-------------------
+output [7:0] out;
+output out_clk;
+
+wire clock, acc_clk, alu_clk, acc_write;
+wire [7:0] acc_data, alu_data;
+
+assign out_clk = !(alu_clk);
+assign out = alu_data;
+
+clk_test clk_test(
+    .clk_in(clk),
+    .rst(rst),
+    .clk_out(clock)
+    );
+
+clk_gen clk_gen(
+    .in(clock),
+    .out1(acc_clk), 
+    .out2(alu_clk),
+    .rst(rst),
+    .acc_write(acc_write)
+    );
+
+accum accum(
+    .write(acc_write),
+    .clk(acc_clk),
+    .data(acc_data),
+    .writedata(alu_data),
+    .rst(rst)
+    );
+
+alu alu(
+    .alu_op(3'b000),
+    .a(`a),
+    .b(acc_data),
+    .clk(alu_clk),
+    .ans(alu_data)
+    );
+
 endmodule

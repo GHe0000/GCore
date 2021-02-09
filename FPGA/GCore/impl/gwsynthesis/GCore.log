@@ -2,6 +2,7 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/accum.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/alu.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clk_gen.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v'
@@ -12,7 +13,6 @@ Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/opram_control.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/pc.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/test/test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore/src/clk_gen.v'
 Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore/src/top.v":4)
 Compiling module 'led_out'("/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v":3)
 Compiling module 'clk_in_test'("/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v":3)

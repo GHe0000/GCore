@@ -1,9 +1,15 @@
 GowinSynthesis start
 Running parser ...
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v'
-Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v":3)
-Compiling module 'opram'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v":9)
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v'
+Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v":6)
+Compiling module 'clk_test'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v":3)
+Compiling module 'clk_gen'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v":2)
+Compiling module 'accum'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v":3)
+Compiling module 'alu'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v":2)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...

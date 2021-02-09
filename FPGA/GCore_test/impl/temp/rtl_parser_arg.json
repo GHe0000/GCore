@@ -1,11 +1,23 @@
 {
  "Files" : [
   {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/opram/opram.v",
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v",
    "Type" : "verilog"
   }
  ],
