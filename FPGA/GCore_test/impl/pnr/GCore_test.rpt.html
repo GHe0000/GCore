@@ -81,7 +81,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Tue Feb  9 22:46:43 2021
+<td>Thu Feb 11 12:01:35 2021
 </td>
 </tr>
 <tr>
@@ -93,11 +93,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <!--<h1><a name="Summary">PnR Summaries</a></h1>-->
 <h2><a name="Placer">Placer:</a></h2>
 <p style="font-size: 14px;">Starting Placer:</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.063129 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.160777 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.008148 secs</p>
-<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 5.00347 secs</p>
-<p style="font-size: 14px;">Total REAL time to Placement completion: 5.23552 secs.<p><br/>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 0 ...  &nbsp  REAL time: 0.032179 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 1 ...  &nbsp  REAL time: 0.134897 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 2 ...  &nbsp  REAL time: 0.007596 secs</p>
+<p style="font-size: 14px;">&nbsp &nbsp  Placement Phase 3 ...  &nbsp  REAL time: 5.00897 secs</p>
+<p style="font-size: 14px;">Total REAL time to Placement completion: 5.18364 secs.<p><br/>
 <h2><a name="Resource_Usage_Summary">Resource Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -107,12 +107,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>69/1152</td>
+<td>66/1152</td>
 <td>5%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>69(61 LUT, 8 ALU, 0 ROM16)</td>
+<td>66(59 LUT, 7 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -122,8 +122,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>45/945</td>
-<td>4%</td>
+<td>34/945</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as Latch</td>
@@ -132,8 +132,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>45/864</td>
-<td>5%</td>
+<td>34/864</td>
+<td>3%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -147,7 +147,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>44/576</td>
+<td>42/576</td>
 <td>7%</td>
 </tr>
 <tr>
@@ -252,10 +252,10 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <br/>
 <h2><a name="Router">Router:</a></h2>
 <p  style="font-size: 14px;">Starting Router:</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 148 unrouted; &nbsp REAL time: 0.000451 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 81 unrouted; &nbsp REAL time: 0.130281 secs</p>
-<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.189315 secs</p>
-<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.320047 secs.</p><br/>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 0: 132 unrouted; &nbsp REAL time: 0.000219 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 1: 77 unrouted; &nbsp REAL time: 0.11867 secs</p>
+<p  style="font-size: 14px;">&nbsp &nbsp  Route Phase 2: 0 unrouted; &nbsp REAL time: 0.178034 secs</p>
+<p  style="font-size: 14px;">  Total REAL time to Router completion: 0.296923 secs.</p><br/>
 <h2><a name="Global_Clock_Usage_Summary">Global Clock Usage Summary:</a></h2>
 <table class="summary_table">
 <tr>
@@ -264,7 +264,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">PRIMARY</td>
-<td>4/8(50%)</td>
+<td>3/8(37%)</td>
 </tr>
 <tr>
 <td class="label">SECONDARY</td>
@@ -303,17 +303,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">clock</td>
 <td>PRIMARY</td>
-<td> RIGHT</td>
-</tr>
-<tr>
-<td class="label">alu_clk</td>
-<td>PRIMARY</td>
 <td> LEFT RIGHT</td>
 </tr>
 <tr>
 <td class="label">s[0]</td>
 <td>PRIMARY</td>
-<td> RIGHT</td>
+<td> LEFT RIGHT</td>
 </tr>
 </table>
 <br/>
@@ -1227,7 +1222,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </table>
 <br/>
 <p style="font-size: 16px;"><b>  Placement and routing completed.</b></p>
-<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 176MB.</a></b></p>
+<p style="font-size: 16px;"><b><a name="Memory_Usage">Memory usage: 243MB.</a></b></p>
 </div><!-- content -->
 </div><!-- main_wrapper -->
 </body>

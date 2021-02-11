@@ -11,17 +11,17 @@
   <GOWIN Version>: V1.9.7.01Beta
   <Part Number>: GW1N-LV1QN48C6/I5
   <Device>: GW1N-1
-  <Created Time>:Tue Feb  9 22:46:43 2021
+  <Created Time>:Thu Feb 11 12:01:35 2021
 
 
 2. Placer
 
   Starting Placer:
-    Placement Phase 0 ...   REAL time: 0.063129 secs
-    Placement Phase 1 ...   REAL time: 0.160777 secs
-    Placement Phase 2 ...   REAL time: 0.008148 secs
-    Placement Phase 3 ...   REAL time: 5.00347 secs
-  Total REAL time to Placement completion: 5.23552 secs.
+    Placement Phase 0 ...   REAL time: 0.032179 secs
+    Placement Phase 1 ...   REAL time: 0.134897 secs
+    Placement Phase 2 ...   REAL time: 0.007596 secs
+    Placement Phase 3 ...   REAL time: 5.00897 secs
+  Total REAL time to Placement completion: 5.18364 secs.
 
 
 3. Resource Usage Summary
@@ -29,15 +29,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 69/1152  5%
-    --LUT,ALU,ROM16           | 69(61 LUT, 8 ALU, 0 ROM16)
+  Logic                       | 66/1152  5%
+    --LUT,ALU,ROM16           | 66(59 LUT, 7 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 45/945  4%
+  Register                    | 34/945  3%
     --Logic Register as Latch | 0/864  0%
-    --Logic Register as FF    | 45/864  5%
+    --Logic Register as FF    | 34/864  3%
     --I/O Register as Latch   | 0/81  0%
     --I/O Register as FF      | 0/81  0%
-  CLS                         | 44/576  7%
+  CLS                         | 42/576  7%
   I/O Port                    | 11
   I/O Buf                     | 11
     --Input Buf               | 2
@@ -72,10 +72,10 @@
 5. Router
 
   Starting Router:
-    Route Phase 0: 148 unrouted; REAL time: 0.000451 secs
-    Route Phase 1: 81 unrouted; REAL time: 0.130281 secs
-    Route Phase 2: 0  unrouted; REAL time: 0.189315 secs
-  Total REAL time to Router completion: 0.320047 secs.
+    Route Phase 0: 132 unrouted; REAL time: 0.000219 secs
+    Route Phase 1: 77 unrouted; REAL time: 0.11867 secs
+    Route Phase 2: 0  unrouted; REAL time: 0.178034 secs
+  Total REAL time to Router completion: 0.296923 secs.
 
 
 6. Global Clock Usage Summary
@@ -83,7 +83,7 @@
   -------------------------------
   Global Clock  | Usage       
   -------------------------------
-  PRIMARY       | 4/8(50%)
+  PRIMARY       | 3/8(37%)
   SECONDARY     | 0/8(0%)
   GCLK_PIN      | 0/4(0%)
   PLL           | 0/1(0%)
@@ -98,9 +98,8 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  LEFT RIGHT
-  clock          | PRIMARY        |  RIGHT
-  alu_clk        | PRIMARY        |  LEFT RIGHT
-  s[0]           | PRIMARY        |  RIGHT
+  clock          | PRIMARY        |  LEFT RIGHT
+  s[0]           | PRIMARY        |  LEFT RIGHT
   ===========================================
 
 
@@ -182,4 +181,4 @@ Loc./Bank| Signal   | Dir.  | Site     | IO Type  | Drive | Pull Mode | PCI Clam
   Placement and routing completed.
 
 
-10. Memory usage: 176MB.
+10. Memory usage: 243MB.

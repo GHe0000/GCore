@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module name="top" Lut="1">
  <SubModule name="clk_test" Register="25" Lut="59"/>
- <SubModule name="clk_gen" Register="4" Lut="4"/>
- <SubModule name="accum" Register="8"/>
- <SubModule name="alu" Register="8" Alu="8"/>
+ <SubModule name="clk_gen" Register="2" Lut="1"/>
+ <SubModule name="accum" Register="7"/>
+ <SubModule name="alu" Alu="7"/>
 </Module>

@@ -8,10 +8,10 @@
         <File path="src/accum.v" type="file.verilog" enable="1"/>
         <File path="src/alu.v" type="file.verilog" enable="1"/>
         <File path="src/clk_gen.v" type="file.verilog" enable="1"/>
-        <File path="src/clk_in_test.v" type="file.verilog" enable="1"/>
         <File path="src/control.v" type="file.verilog" enable="1"/>
+        <File path="src/debug/debug.v" type="file.verilog" enable="0"/>
         <File path="src/example.v" type="file.verilog" enable="0"/>
-        <File path="src/led_out.v" type="file.verilog" enable="1"/>
+        <File path="src/led.v" type="file.verilog" enable="1"/>
         <File path="src/mem/mem.v" type="file.verilog" enable="1"/>
         <File path="src/mem_control.v" type="file.verilog" enable="1"/>
         <File path="src/mux.v" type="file.verilog" enable="1"/>
@@ -19,9 +19,10 @@
         <File path="src/opram_control.v" type="file.verilog" enable="1"/>
         <File path="src/pc.v" type="file.verilog" enable="1"/>
         <File path="src/test/test.v" type="file.verilog" enable="1"/>
+        <File path="src/test_clk.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/GCore.cst" type="file.cst" enable="1"/>
-        <File path="No_test" type="file.other" enable="1"/>
+        <File path="src/debug.mi" type="file.other" enable="1"/>
         <File path="src/test.mi" type="file.other" enable="1"/>
     </FileList>
 </Project>

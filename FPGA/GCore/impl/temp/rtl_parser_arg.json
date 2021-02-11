@@ -13,15 +13,11 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/clk_in_test.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/control.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/led_out.v",
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/led.v",
    "Type" : "verilog"
   },
   {
@@ -46,6 +42,10 @@
   },
   {
    "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/test/test.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/ubantu/Code/GCore/FPGA/GCore/src/test_clk.v",
    "Type" : "verilog"
   },
   {

@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
-    "InstLine" : 33,
+    "InstLine" : 32,
     "InstName" : "accum",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v",
     "ModuleLine" : 3,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v",
-    "InstLine" : 41,
+    "InstLine" : 40,
     "InstName" : "alu",
     "ModuleFile" : "/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v",
     "ModuleLine" : 2,

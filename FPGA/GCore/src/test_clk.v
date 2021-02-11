@@ -1,9 +1,9 @@
 // Test
 
-module clk_in_test(clk_in, rst, clk_out);
+module test_clk(clk_in, rst, clk_out);
 
 parameter wide = 24,
-          c = 24'd1200_0000,
+          c = 24'd300_0000,
           zero = 24'd0,
           d = 24'd1;
 

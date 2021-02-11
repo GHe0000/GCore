@@ -1,83 +1,56 @@
 // GCore CPU Top
 
-//module top(clk, rst, write, writeop, writeaddr, write_rst, out);
-module top(clk, rst, out, clk_out, sel_out);
+module top(clk, rst, out_sel, led_out, clk_out);
 
+// IO
 input clk;
 input rst;
-
-//Test led out select
-//input sel_out;
-output sel_out;
-
-//input write, write_rst;
-//input [7:0] writeop;
-//input [7:0] writeaddr; 
+input out_sel;
 
 output clk_out;
+output [7:0] led_out;
 
-output [7:0] out;
+// Control Signal
+wire jump, branch, zero, accwrite, memwrite, memread;
 
-wire jump, branch, zero, accwrite,memwrite, memread;
 wire [1:0] accdst;
 wire [2:0] aluop;
 
+// Data Access
 wire [7:0] op, op_addr, acc_data, mem_data, alu_data, mux_data;
 
-wire pc_clk, opram_clk, mem_clk, acc_clk, alu_clk;
-wire out_clk;
+// Clock
+wire pc_clk, opram_clk, mem_clk, acc_clk, led_out_clk;
 wire clk_t;
 
-assign clk_out = !(out_clk);
+// Clk Out
+assign clk_out = !(led_out_clk);
 
-led_out led_out(
+// Module
+led led(
     .acc(acc_data),
-    .addr(mem_data),
-    .out(out),
-    .sel_out(sel_out),
-    .clk(out_clk)
+    .addr(op_addr),
+    .out(led_out),
+    .out_sel(out_sel),
+    .clk(led_out_clk)
     );
 
-/*
-led_out led_out(
-    .acc(acc_data),
-    .addr(op),
-    .out(out),
-    .sel(sel_out),
-    .clk(out_clk)
-    );
-*/
-
-clk_in_test clk_in_test(
+test_clk test_clk(
     .clk_in(clk),
     .rst(rst),
     .clk_out(clk_t)
-    );//Test module
+    );
 
 clk_gen clk_gen(
     .clk_in(clk_t),
-    .pc(pc_clk),
-    .opram(opram_clk),
-    .mem(mem_clk),
-    .acc(acc_clk),
-    .alu(alu_clk),
-    .out(out_clk),
+    .pc_clk(pc_clk),
+    .opram_clk(opram_clk),
+    .mem_clk(mem_clk),
+    .acc_clk(acc_clk),
+    .led_out_clk(led_out_clk),
     .ena(1'b1),
     .rst(rst)
     );
-
-/*
-clock clock(
-    .clk_in(clk),
-    .pc(pc_clk),
-    .opram(opram_clk),
-    .mem(mem_clk),
-    .acc(acc_clk),
-    .alu(alu_clk),
-    .ena(1'b1),
-    .rst(rst)
-);
-*/
 
 pc pc(
     .jump(jump|(branch&zero)),
@@ -89,31 +62,12 @@ pc pc(
 
 opram_control opram_control(
     .write(1'b0),
-    .clk(opram_clk),//!
+    .clk(opram_clk),
     .rst(1'b1),
     .addr(op_addr),
     .writeop(8'b0000_0000),
     .op(op)
     );
-
-/*
-pc pc(
-    .jump(jump|(branch&zero)),
-    .clk(pc_clk),//!
-    .addr(op_addr),
-    .jumpaddr(mem_data),
-    .rst(rst)
-    );
-
-opram_control opram_control(
-    .write(write),
-    .clk(opram_clk),//!
-    .rst(write_rst),
-    .addr(op_addr),
-    .writeop(writeop),
-    .op(op)
-    );
-*/
 
 control control(
     .op(op[7:4]),
@@ -131,7 +85,7 @@ mem_control mem_control(
     .read(memread),
     .addr(op[3:0]),
     .writedata(acc_data),
-    .clk(mem_clk), //!
+    .clk(mem_clk),
     .rst(rst),
     .data(mem_data)
     );
@@ -148,7 +102,7 @@ mux mux(
 accum accum(
     .writedata(mux_data),
     .write(accwrite),
-    .clk(acc_clk),//!
+    .clk(acc_clk),
     .rst(rst),
     .data(acc_data)
     );
@@ -157,7 +111,6 @@ alu alu(
     .alu_op(aluop),
     .a(acc_data),
     .b(mem_data),
-    .clk(alu_clk),//!
     .ans(alu_data),
     .zero(zero)
     );

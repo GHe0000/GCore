@@ -1,9 +1,8 @@
 // ALU
-module alu(alu_op, a, b, clk, ans);
+module alu(alu_op, a, b, ans);
 
 input [7:0] a, b;
 input [2:0] alu_op;
-input clk;
 
 output [7:0] ans;
 
@@ -17,9 +16,9 @@ parameter ALU_ADD = 3'b000,
           ALU_SLT = 3'b110,
           ALU_BZ  = 3'b111;
 
-always @(posedge clk)
+always @(a or b or alu_op)
     begin
-        casex(alu_op)
+        case(alu_op)
             ALU_ADD : ans <= a + b;
             ALU_SUB : ans <= a - b;
             ALU_AND : ans <= a & b;

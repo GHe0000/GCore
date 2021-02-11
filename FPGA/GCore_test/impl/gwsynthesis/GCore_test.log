@@ -1,10 +1,10 @@
 GowinSynthesis start
 Running parser ...
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v'
+Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v'
 Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v'
-Analyzing Verilog file '/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v'
 Compiling module 'top'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v":6)
 Compiling module 'clk_test'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v":3)
 Compiling module 'clk_gen'("/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v":2)

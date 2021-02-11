@@ -4,11 +4,11 @@
     <Version>beta</Version>
     <Device id="GW1N-1" package="QFN48" speed="6" partNumber="GW1N-LV1QN48C6/I5"/>
     <FileList>
+        <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v" type="verilog"/>
+        <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_gen.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/clk_test.v" type="verilog"/>
         <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/top.v" type="verilog"/>
-        <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/accum.v" type="verilog"/>
-        <File path="/home/ubantu/Code/GCore/FPGA/GCore_test/src/alu.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
