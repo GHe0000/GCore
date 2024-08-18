@@ -6,7 +6,7 @@
 
 ##### Version:0.3.6 Beta 
 
-项目地址：<https://github.com/wallfacerlogic/GCore>
+项目地址：<https://github.com/GHe0000/GCore>
 
 ---
 
